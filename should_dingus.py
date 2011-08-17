@@ -1,5 +1,6 @@
 from should_dsl import matcher
 
+__version__ = '0.2'
 
 class Call(object):
     

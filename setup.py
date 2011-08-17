@@ -1,8 +1,9 @@
 from setuptools import setup
+import should_dingus
 
 setup(
     name='should-dingus',
-    version='0.1',
+    version=should_dingus.__version__,
     author='Chris Wesseling',
     author_email='chris.wesseling@cwi.nl',
     url='https://github.com/CharString/should-dingus',
