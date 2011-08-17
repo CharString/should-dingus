@@ -74,3 +74,13 @@ class TestCall:
                 "with params (1,) {'one': 1}, expected 1")
         wrapper |should| throw(ShouldNotSatisfied, msg)
 
+    def test_call_should_not_reset(self):
+        def wrapper():
+            def actions():
+                self.dinges()
+            actions |should| call(self.dinges).once
+
+        self.dinges()
+        self.dinges()
+        msg = '<Dingus callable> was called 3 times, expected 1'
+        wrapper |should| throw(ShouldNotSatisfied, msg)

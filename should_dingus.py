@@ -23,7 +23,6 @@ class Call(object):
         return self
 
     def match(self, function):
-        self._called_dingus.reset()
         function()
         self._calls = self._called_dingus.calls('()',
                 *self._args, **self._kwargs)

@@ -37,7 +37,9 @@ Checks calls on a Dingus ::
     ...     stub()
     ...     stub()
     ...
+    >>> stub.reset()
     >>> some_function |should| call(stub)
+    >>> stub.reset()
     >>> some_function |should| call(stub).once
     Traceback (most recent call last):
     ...
@@ -48,7 +50,9 @@ Checks calls on a Dingus ::
     >>> def some_function():
     ...     stub(True, kwak='tuut', braat='aap')
     ...
+    >>> stub.reset()
     >>> some_function |should| call(stub).with_params(True, kwak='tuut', braat='aap')
+    >>> stub.reset()
     >>> some_function |should| call(stub).with_params(True, kwak='tuut')
     Traceback (most recent call last):
     ...
@@ -59,6 +63,7 @@ Checks calls on a Dingus ::
     >>> def some_function():
     ...     stub(True, kwak='tuut', braat='aap')
     ...
+    >>> stub.reset()
     >>> some_function |should| call(stub).once.with_params(True, kwak='tuut', braat='aap')
     >>> stub.reset()
     >>> some_function |should| call(stub).with_params(True, kwak='tuut', braat='aap').once
