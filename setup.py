@@ -23,6 +23,7 @@ setup(
     license='BSD',
     keywords='dingus should dsl testing test mocking mock double stub fake record assert bdd python expectation',
     py_modules=['should_dingus'],
+    setup_requires=['nose'],
     install_requires=['dingus',
                       'should-dsl'
                      ]

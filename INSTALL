@@ -1,0 +1,43 @@
+Should-dingus can be installed in two ways: by downloading the package and
+installing it manually or by using pip.
+
+Using pip
+---------
+
+Using pip is the easiest way to install should-dingus. It will automatically
+install the requirements. If you don't have pip installed yet, but you do have
+easy_install on your system, install pip using easy_install (it's so much
+better)::
+
+    easy_install pip
+
+And use pip to install should-dingus::
+
+    pip install should-dingus
+
+Or if you already have an older version of should-dingus installed and like to
+upgrade::
+
+    pip install --update should-dingus
+
+
+Manual installation
+-------------------
+
+If you have downloaded the package:
+
+1. Unpack it::
+
+    tar -zxf should-dingus-{version}.tar.gz
+
+2. Change to the should-dingus directory::
+
+    cd should-dingus-{version}
+
+3. Run tests (optional)::
+
+    python setup.py nosetests
+
+4. Install::
+
+    python setup.py install
