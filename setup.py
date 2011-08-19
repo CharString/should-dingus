@@ -1,13 +1,15 @@
 from setuptools import setup
-import should_dingus
 from os import path
 
 
 long_desc = open(path.join(path.dirname(__file__), 'README.rst')).read()
 
+install_req = ['dingus', 'should-dsl']
+setup_req = install_req + ['nose']
+
 setup(
     name='should-dingus',
-    version=should_dingus.__version__,
+    version='0.3',
     author='Chris Wesseling',
     author_email='chris.wesseling@cwi.nl',
     url='https://github.com/CharString/should-dingus',
@@ -21,10 +23,10 @@ setup(
         'Topic :: Software Development :: Testing',
         ],
     license='BSD',
-    keywords='dingus should dsl testing test mocking mock double stub fake record assert bdd python expectation',
+    keywords=('dingus should dsl testing test mocking '
+        'mock double stub fake record assert bdd python expectation'),
     py_modules=['should_dingus'],
-    setup_requires=['nose'],
-    install_requires=['dingus',
-                      'should-dsl'
-                     ]
+    tests_requires=setup_req,
+    setup_requires=setup_req,
+    install_requires=install_req,
     )

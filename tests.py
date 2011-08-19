@@ -1,6 +1,7 @@
 import should_dingus
 from dingus import Dingus
-from should_dsl import should, should_not, ShouldNotSatisfied
+from should_dsl import should, should_not
+from should_dsl.dsl import ShouldNotSatisfied
 
 
 class TestCall:
