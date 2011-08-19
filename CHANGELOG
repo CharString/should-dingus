@@ -1,3 +1,9 @@
+2011-08-19  v0.3
+
+	Fix tests.py for should_dsl-2.0a4
+	Add tests to distribution.
+	Fixes pip install from distribution.
+
 2011-08-17  v0.2
 
 	call should not reset the dingus, that borks return_value too.
