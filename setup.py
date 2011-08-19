@@ -26,7 +26,6 @@ setup(
     keywords=('dingus should dsl testing test mocking '
         'mock double stub fake record assert bdd python expectation'),
     py_modules=['should_dingus'],
-    tests_requires=setup_req,
     setup_requires=setup_req,
     install_requires=install_req,
     )
