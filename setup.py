@@ -1,5 +1,9 @@
 from setuptools import setup
 import should_dingus
+from os import path
+
+
+long_desc = open(path.join(path.dirname(__file__), 'README.rst')).read()
 
 setup(
     name='should-dingus',
@@ -8,7 +12,7 @@ setup(
     author_email='chris.wesseling@cwi.nl',
     url='https://github.com/CharString/should-dingus',
     description='Dingus call matcher for should-dsl',
-    long_description=open('README.rst').read(),
+    long_description=long_desc,
     classifiers=['Development Status :: 4 - Beta',
         'Intended Audience :: Developers',
         'License :: OSI Approved :: BSD License',
